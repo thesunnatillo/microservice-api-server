@@ -1,0 +1,6 @@
+[submodule "globals"]
+	path = globals
+	url = https://github.com/thesunnatillo/microoservice-globals-folder.git
+[submodule "src/globals"]
+	path = src/globals
+	url = https://github.com/thesunnatillo/microoservice-globals-folder.git

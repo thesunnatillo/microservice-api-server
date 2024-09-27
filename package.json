@@ -6,7 +6,9 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
-    "build": "nest build",
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && tsc && npm run copy-proto",
+    "copy-proto": "copyfiles -u 1 \"./src/globals/protos/*.proto\" dist/src",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
@@ -20,11 +22,15 @@
     "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
+    "@grpc/grpc-js": "^1.11.3",
+    "@grpc/proto-loader": "^0.7.13",
     "@nestjs/common": "^10.0.0",
     "@nestjs/core": "^10.0.0",
+    "@nestjs/microservices": "^10.4.4",
     "@nestjs/platform-express": "^10.0.0",
     "reflect-metadata": "^0.2.0",
-    "rxjs": "^7.8.1"
+    "rxjs": "^7.8.1",
+    "ts-proto": "^2.2.0"
   },
   "devDependencies": {
     "@nestjs/cli": "^10.0.0",
@@ -36,6 +42,7 @@
     "@types/supertest": "^6.0.0",
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.42.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
@@ -55,7 +62,7 @@
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "rootDir": "src/",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
