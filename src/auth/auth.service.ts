@@ -7,7 +7,7 @@ import {
   LogOutDto,
   SignInDto,
   SignUpDto,
-} from 'globals/protos/auth';
+} from '../globals/protos/auth';
 
 @Injectable()
 export class AuthService implements OnModuleInit {
@@ -24,14 +24,14 @@ export class AuthService implements OnModuleInit {
   }
 
   signin(signInDto: SignInDto) {
-    return this.authServiceClient.signIn(signInDto)
+    return this.authServiceClient.signIn(signInDto);
   }
 
   logout(logOutDto: LogOutDto) {
-    return this.authServiceClient.logOut(logOutDto)
+    return this.authServiceClient.logOut(logOutDto);
   }
 
   getme(getMeDto: GetMeDto) {
-    return this.authServiceClient.getMe(getMeDto)
+    return this.authServiceClient.getMe(getMeDto);
   }
 }

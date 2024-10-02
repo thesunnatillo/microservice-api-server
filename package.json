@@ -8,7 +8,7 @@
   "scripts": {
     "clean": "rimraf ./dist",
     "build": "npm run clean && tsc && npm run copy-proto",
-    "copy-proto": "copyfiles -u 1 \"./src/globals/protos/*.proto\" dist/src",
+    "copy-proto": "copyfiles -u 1 \"./src/globals/protos/*.proto\" dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
