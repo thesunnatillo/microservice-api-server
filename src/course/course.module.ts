@@ -3,6 +3,8 @@ import { CourseController } from './course.controller';
 import { CourseService } from './course.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
+import { JwtModule } from '@nestjs/jwt';
+import { JwtStrategy } from '../../strategy/jwt.strategy';
 
 @Module({
   imports: [
@@ -17,8 +19,12 @@ import { join } from 'path';
         },
       },
     ]),
+    JwtModule.register({
+      secret: 'ac-scrt',
+      signOptions: { expiresIn: '1h' },
+    }),
   ],
   controllers: [CourseController],
-  providers: [CourseService],
+  providers: [CourseService, JwtStrategy],
 })
 export class CourseModule {}

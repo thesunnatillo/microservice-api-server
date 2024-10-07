@@ -5,6 +5,8 @@ import {
   CoursesServiceClient,
   CreateCourseDto,
   DeleteCourseDto,
+  GetAllDto,
+  GetByIdDto,
   UpdateCourseDto,
 } from '../globals/protos/core';
 
@@ -19,12 +21,18 @@ export class CourseService implements OnModuleInit {
   }
 
   createCourse(createCourseDto: CreateCourseDto) {
-    this.courseServiceClient.create(createCourseDto);
+    return this.courseServiceClient.create(createCourseDto);
   }
   updateCourse(updateCourseDto: UpdateCourseDto) {
-    this.courseServiceClient.update(updateCourseDto);
+    return this.courseServiceClient.update(updateCourseDto);
   }
   deleteCourse(deleteCourseDto: DeleteCourseDto) {
-    this.courseServiceClient.delete(deleteCourseDto);
+    return this.courseServiceClient.delete(deleteCourseDto);
+  }
+  getById(getByIdDto: GetByIdDto) {
+    return this.courseServiceClient.getById(getByIdDto);
+  }
+  getAll(getAllDto: GetAllDto) {
+    return this.courseServiceClient.getAll(getAllDto);
   }
 }
