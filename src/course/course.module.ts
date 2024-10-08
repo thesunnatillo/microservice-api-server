@@ -4,7 +4,7 @@ import { CourseService } from './course.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { JwtModule } from '@nestjs/jwt';
-import { JwtStrategy } from '../../strategy/jwt.strategy';
+import { JwtStrategy } from '../strategy/jwt.strategy';
 
 @Module({
   imports: [

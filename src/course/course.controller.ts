@@ -16,9 +16,9 @@ import {
   GetByIdDto,
   UpdateCourseDto,
 } from '../globals/protos/core';
-import { JwtAuthGuard } from '../../guards/jwtauth.guard';
-import { RolesGuard } from '../../guards/role.guards';
-import { Roles } from '../../guards/role.decorator';
+import { JwtAuthGuard } from '../guards/jwtauth.guard';
+import { RolesGuard } from '../guards/roles.guards';
+import { Roles } from '../decorators/roles.decorator';
 
 @Controller('course')
 export class CourseController {
