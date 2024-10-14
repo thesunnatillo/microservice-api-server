@@ -7,7 +7,7 @@ import {
   LogOutDto,
   SignInDto,
   SignUpDto,
-} from '../globals/protos/auth';
+} from '@global/protos/auth';
 
 @Injectable()
 export class AuthService implements OnModuleInit {

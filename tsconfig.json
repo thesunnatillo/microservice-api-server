@@ -9,13 +9,21 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist/",
+    "paths": {
+      "@app/*": ["src/*"],
+      "@auth/*": ["src/auth/*"],
+      "@course/*": ["src/course/*"],
+      "@global/*": ["src/globals/*"],
+      "@guard/*": ["src/guards/*"],
+      "@deco/*": ["src/decorators/*"]
+    },
     "incremental": true,
     "skipLibCheck": true,
     "strictNullChecks": false,
     "noImplicitAny": false,
     "strictBindCallApply": false,
     "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
+    "noFallthroughCasesInSwitch": false
   },
   "include": ["src/**/*"]
 }

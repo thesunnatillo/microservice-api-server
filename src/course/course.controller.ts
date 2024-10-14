@@ -8,17 +8,17 @@ import {
   Post,
   UseGuards,
 } from '@nestjs/common';
-import { CourseService } from './course.service';
+import { CourseService } from '@course/course.service';
 import {
   CreateCourseDto,
   DeleteCourseDto,
   GetAllDto,
   GetByIdDto,
   UpdateCourseDto,
-} from '../globals/protos/core';
-import { JwtAuthGuard } from '../guards/jwtauth.guard';
-import { RolesGuard } from '../guards/roles.guards';
-import { Roles } from '../decorators/roles.decorator';
+} from '@global/protos/core';
+import { JwtAuthGuard } from '@guard/jwtauth.guard';
+import { RolesGuard } from '@guard/roles.guards';
+import { Roles } from '@deco/roles.decorator';
 
 @Controller('course')
 export class CourseController {

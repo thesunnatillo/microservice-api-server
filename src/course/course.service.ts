@@ -8,7 +8,7 @@ import {
   GetAllDto,
   GetByIdDto,
   UpdateCourseDto,
-} from '../globals/protos/core';
+} from '@global/protos/core';
 
 @Injectable()
 export class CourseService implements OnModuleInit {
