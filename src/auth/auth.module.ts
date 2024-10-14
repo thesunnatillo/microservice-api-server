@@ -12,7 +12,7 @@ import { join } from 'path';
         transport: Transport.GRPC,
         options: {
           package: 'auth',
-          protoPath: join(__dirname, '../globals/protos/auth.proto'),
+          protoPath: join(__dirname, '../global/protos/auth.proto'),
           url: 'localhost:5000',
         },
       },

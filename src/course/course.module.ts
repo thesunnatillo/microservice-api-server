@@ -13,7 +13,7 @@ import { JwtStrategy } from '../strategy/jwt.strategy';
         name: 'COURSE',
         transport: Transport.GRPC,
         options: {
-          protoPath: join(__dirname, '../globals/protos/core.proto'),
+          protoPath: join(__dirname, '../global/protos/core.proto'),
           package: 'core',
           url: 'localhost:5001',
         },
