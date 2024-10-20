@@ -5,6 +5,9 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 import { JwtModule } from '@nestjs/jwt';
 import { JwtStrategy } from '../strategy/jwt.strategy';
+import * as dotenv from 'dotenv';
+import * as process from 'node:process';
+dotenv.config();
 
 @Module({
   imports: [
@@ -15,12 +18,12 @@ import { JwtStrategy } from '../strategy/jwt.strategy';
         options: {
           protoPath: join(__dirname, '../global/protos/core.proto'),
           package: 'core',
-          url: 'localhost:5001',
+          url: process.env.CORE_GRPC_URL,
         },
       },
     ]),
     JwtModule.register({
-      secret: 'ac-scrt',
+      secret: process.env.AT_SECRET,
       signOptions: { expiresIn: '1h' },
     }),
   ],
