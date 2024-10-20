@@ -9,11 +9,10 @@
     "target": "ES2021",
     "sourceMap": true,
     "outDir": "./dist/",
+    "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/*"],
       "@auth/*": ["src/auth/*"],
       "@course/*": ["src/course/*"],
-      "@global/*": ["src/globals/*"],
       "@guard/*": ["src/guards/*"],
       "@deco/*": ["src/decorators/*"]
     },

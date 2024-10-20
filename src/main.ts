@@ -1,5 +1,5 @@
 import { NestFactory } from '@nestjs/core';
-import { AppModule } from '@app/app.module';
+import { AppModule } from './app.module';
 import * as bodyParser from 'body-parser';
 import rateLimit from 'express-rate-limit';
 import { ConfigService } from '@nestjs/config';

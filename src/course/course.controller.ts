@@ -15,7 +15,7 @@ import {
   GetAllDto,
   GetByIdDto,
   UpdateCourseDto,
-} from '@global/protos/core';
+} from '../global/protos/core';
 import { JwtAuthGuard } from '@guard/jwtauth.guard';
 import { RolesGuard } from '@guard/roles.guards';
 import { Roles } from '@deco/roles.decorator';
